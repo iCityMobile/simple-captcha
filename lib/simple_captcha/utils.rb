@@ -21,11 +21,11 @@ module SimpleCaptcha #:nodoc
     end
 
     def self.simple_captcha_value(key) #:nodoc
-      WebSimpleCaptchaData.get_data(key).value rescue nil
+      SimpleCaptchaData.get_data(key).value rescue nil
     end
 
     def self.simple_captcha_passed!(key) #:nodoc
-      WebSimpleCaptchaData.remove_data(key)
+      SimpleCaptchaData.remove_data(key)
     end
 
     def self.generate_key(*args)

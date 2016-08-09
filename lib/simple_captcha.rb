@@ -36,6 +36,9 @@ module SimpleCaptcha
 
   mattr_accessor :length
   @@length = 5
+  
+  mattr_accessor :table_name
+  @@table_name = "simple_captcha_data"
 
   # 'embosed_silver',
   # 'simply_red',

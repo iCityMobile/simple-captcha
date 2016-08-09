@@ -22,6 +22,7 @@ module SimpleCaptcha
     autoload :SimpleCaptchaData,      'simple_captcha/simple_captcha_data_mongoid.rb'
   end
 
+  autoload :WebSimpleCaptchaData, 'simple_captcha/web_simple_captcha_data'
 
   autoload :Middleware,        'simple_captcha/middleware'
 

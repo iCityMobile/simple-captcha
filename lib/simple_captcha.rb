@@ -21,8 +21,13 @@ module SimpleCaptcha
   else
     autoload :SimpleCaptchaData,      'simple_captcha/simple_captcha_data_mongoid.rb'
   end
-
-  autoload :WebSimpleCaptchaData, 'simple_captcha/web_simple_captcha_data'
+  
+  if defined?(ActiveRecord)
+    autoload :WebSimpleCaptchaData, 'simple_captcha/web_simple_captcha_data'
+  else
+    autoload :WebSimpleCaptchaData, 'simple_captcha/web_simple_captcha_data_mongoid.rb'
+  end
+  
 
   autoload :Middleware,        'simple_captcha/middleware'
 

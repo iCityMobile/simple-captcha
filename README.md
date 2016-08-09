@@ -35,7 +35,7 @@ brew install ghostscript
 Put this into your Gemfile
 
 ```ruby
-gem 'yl_simple_captcha', require: 'simple_captcha'
+gem 'yl_simple_captcha', require: 'simple_captcha', :git => 'git://github.com/jiawenliang/simple-captcha.git'
 ```
 
 and run ``bundle install``.

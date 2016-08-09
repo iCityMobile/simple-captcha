@@ -46,6 +46,7 @@ module SimpleCaptcha #:nodoc
       render :partial => SimpleCaptcha.partial_path, :locals => { :simple_captcha_options => simple_captcha_options(options) }
     end
 
+
     def simple_captcha_options(options = {})
       key = simple_captcha_key(options[:object])
       if options[:multiple] === false

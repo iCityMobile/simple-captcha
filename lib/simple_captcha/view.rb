@@ -54,6 +54,7 @@ module SimpleCaptcha #:nodoc
          
       render :partial => 'simple_captcha/simple_captcha', :locals => { :simple_captcha_options => defaults }
     end
+    
 
     private
 

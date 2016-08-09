@@ -35,7 +35,7 @@ brew install ghostscript
 Put this into your Gemfile
 
 ```ruby
-gem 'simple_captcha2', require: 'simple_captcha'
+gem 'yl_simple_captcha', require: 'simple_captcha'
 ```
 
 and run ``bundle install``.
@@ -45,7 +45,7 @@ and run ``bundle install``.
 After installation, follow these simple steps to setup the plugin. The setup will depend on the version of rails your application is using.
 
 ```bash
-rails generate simple_captcha [template_format] # Available options erb, haml. Default: erb
+rails generate simple_captcha [template_format] # Available options erb, haml. Default: erb 
 rake db:migrate # Mongoid: skip this step and remove the migration
 ```
 
@@ -203,6 +203,9 @@ SimpleCaptcha.setup do |sc|
 
   # default: 5
   sc.length = 6
+  
+  # when the table name is changed,should defined it.defalut: simple_captcha_data.
+  sc.table_name = "simple_captcha_data"
 
   # default: simply_blue
   # possible values:
